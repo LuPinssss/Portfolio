@@ -632,6 +632,17 @@ li::before {
     max-height: 220px;
     object-fit: cover;
   }
+  #experience{
+    padding: 100px 15px 40px;
+    min-height: auto;
+  }
+  #experience .card{
+    width: 100%;
+    max-width: 100%;
+    padding: 28px 20px;
+    align-items: stretch;
+    text-align: left;
+  }
   .experience-head{
     font-size: 18px;
     letter-spacing: 2px;
@@ -639,19 +650,26 @@ li::before {
   }
   .experience-container{
     width: 100%;
-    text-align: left;
   }
   .experience-container h4{
     font-size: 14px;
     letter-spacing: 2px;
+    line-height: 1.5;
+    word-break: break-word;
   }
   .experience-container ul{
     margin-top: 15px;
-    letter-spacing: 1px;
+    padding-left: 0;
     font-size: 14px;
+    letter-spacing: 1px;
   }
   .experience-container ul li{
-    line-height: 1.6;
+    margin: 10px 0;
+    line-height: 1.7;
+    word-break: break-word;
+  }
+  li::before{
+    margin-right: 6px;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px){
