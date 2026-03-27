@@ -9,6 +9,9 @@
   --emerald: #2ECC71;
   --soft-gold:#C9A227;
 }
+html, body{
+  overflow-x: hidden;
+}
 html{
   scroll-behavior: smooth;
 }
