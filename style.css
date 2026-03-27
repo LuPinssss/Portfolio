@@ -474,6 +474,18 @@ li::before {
 }
 
 @media (max-width: 768px){
+  header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .navbar{
+    padding: 15px 20px;
+  }
+  .img-logo{
+    height: 40px;
+  }
   .burger{
     display: flex;
   }
@@ -485,8 +497,9 @@ li::before {
     flex-direction: column;
     align-items: center;
     gap: 0;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.92);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease;
@@ -503,93 +516,142 @@ li::before {
     padding: 18px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
-  menu li a::after{
+  .menu li a::after{
     display: none;
   }
   .menu li a:hover{
     background: rgba(255, 255, 255, 0.05);
   }
-.nav-toggle:checked ~ .burger span:nth-child(1){
+  .nav-toggle:checked ~ .burger span:nth-child(1){
     transform: translateY(8px) rotate(45deg);
   }
-.nav-toggle:checked ~ .burger span:nth-child(2){
+  .nav-toggle:checked ~ .burger span:nth-child(2){
     opacity: 0;
   }
-.nav-toggle:checked ~ .burger span:nth-child(3){
+  .nav-toggle:checked ~ .burger span:nth-child(3){
     transform: translateY(-8px) rotate(-45deg);
   }
-  .home-card{
-    width: 90%;
-    padding: 35px 25px;
+  #home,
+  #skills,
+  #projects,
+  #experience{
+    padding: 100px 15px 40px;
+    min-height: auto;
+  }
+  .card{
+    width: 100%;
+    max-width: 100%;
+    padding: 28px 20px;
+    gap: 18px;
+    align-items: center;
+    text-align: center;
+  }
+  .card h2{
+    font-size: clamp(28px, 9vw, 40px);
+    line-height: 1.2;
+  }
+  .card p{
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 100%;
+  }
+  .social-icons{
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .card video{
+    width: 100%;
+    max-width: 100%;
   }
   #home::before{
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
+    top: 8%;
+    left: -10%;
   }
   #home::after{
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
+    right: -8%;
+    bottom: 8%;
   }
-  .icon-item{
-    flex: 0 0 calc(50% - 12.5px);
-  }
-  .icon-item img{
-    width: 40px;
-    height: 40px;
-  }
-  .icon-item span{
-    font-size: 10px;
-  }
-  #skills .card{
-    width: 90%;
-    padding: 35px 25px;
-  }
-  #skills::before{
-    width: 200px;
-    height: 200px;
-  }
-  #skills::after{
+  #skills::before,
+  #projects::before,
+  #experience::before{
     width: 180px;
     height: 180px;
   }
-  #projects {
-    padding: 80px 15px 40px;
-    min-height: auto;
+  #skills::after,
+  #projects::after,
+  #experience::after{
+    width: 160px;
+    height: 160px;
   }
-  .project-container{
+  .icons{
     gap: 15px;
   }
+  .icon-item{
+    flex: 1 1 calc(50% - 15px);
+    min-width: 130px;
+    max-width: none;
+    padding: 20px 12px;
+  }
+  .icon-item .img,
+  .icon-item img{
+    width: 42px;
+    height: 42px;
+  }
+  .icon-item span{
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+  .project-container{
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
   .project-cards{
+    width: 100%;
     flex: 1 1 100%;
-    padding: 20px 15px;
+    padding: 18px 14px;
     gap: 12px;
   }
   .project-head{
     font-size: 18px;
     letter-spacing: 2px;
+    text-align: center;
   }
   .project-cards h3{
     font-size: 13px;
     letter-spacing: 2px;
+    text-align: center;
   }
   .project-img{
-    max-height: 200px;
+    width: 100%;
+    height: auto;
+    max-height: 220px;
+    object-fit: cover;
   }
-  #projects::before{
-    width: 200px;
-    height: 200px;
-    opacity: 0.2;
+  .experience-head{
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-align: center;
   }
-  #projects::after{
-    width: 180px;
-    height: 180px;
-    opacity: 0.2;
+  .experience-container{
+    width: 100%;
+    text-align: left;
   }
-  .project-cards:hover{
-    transform: translateY(-5px);
-    box-shadow:
-      0 8px 25px rgba(46, 204, 113, 0.25),
-      0 0 35px 8px rgba(201, 162, 39, 0.15);
+  .experience-container h4{
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+  .experience-container ul{
+    margin-top: 15px;
+    letter-spacing: 1px;
+    font-size: 14px;
+  }
+  .experience-container ul li{
+    line-height: 1.6;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px){
