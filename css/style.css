@@ -181,6 +181,15 @@ header{
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
+.social-icon{
+  width: 30px;
+  height: 30px;
+}
+.social-icons{
+  display: flex;
+  gap: 10px;
+}
+
 /* skills */
 #skills{
   min-height: 100vh;
