@@ -375,7 +375,7 @@ header{
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 0 1 clamp(800px, 40%, 500px);
+  flex: 1 1 500px;
   padding: 25px 15px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.07);
@@ -478,13 +478,16 @@ li::before {
 
 @media (max-width: 768px){
   header{
-    position: fixed;
-    top: 0;
     left: 0;
+    right: 0;
     width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
   }
   .navbar{
-    padding: 15px 20px;
+    width: 100%;
+    max-width: 100%;
+    padding: 15px 16px;
   }
   .img-logo{
     height: 40px;
@@ -549,11 +552,11 @@ li::before {
     align-items: center;
     text-align: center;
   }
-  .card h2{
-    font-size: 2rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  #home .card h2{
+    font-size: 1.6rem;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
   .card p{
     font-size: 14px;
